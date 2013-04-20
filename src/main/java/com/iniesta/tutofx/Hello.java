@@ -17,6 +17,13 @@
 package com.iniesta.tutofx;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -30,7 +37,28 @@ public class Hello extends Application {
 	 */
 	@Override
 	public void start(Stage stage) throws Exception {
+		//Create the container and all the controls inside of the stage
+		VBox parent = new VBox(10);
+		parent.setAlignment(Pos.CENTER);
+		//Create the lable
+		final Label label = new Label("Hello, World!");
+		label.setVisible(false);
+		//Create the button
+		Button button = new Button("Click here!");
+		button.setOnAction(new EventHandler<ActionEvent>() {			
+			public void handle(ActionEvent event) {
+				//Show the label again
+				label.setVisible(!label.isVisible());
+			}
+		});
+		//Add the controls in the container
+		parent.getChildren().addAll(button, label);
 		
+		//Create the scene
+		Scene scene = new Scene(parent, 300, 200);
+		stage.setScene(scene);
+		//Show the stage
+		stage.show();
 	}
 
 	/**
