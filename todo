@@ -1,6 +1,8 @@
 ToDo in Step02
 
-Make the same application that in step01, but with FXML.
+Make the same application that in step01, but with FXML. But now we are going to intrude a TextField.
+
+When we press the button, the text input will be shown in the label.
 
 The fxml file should go to the resources pagToDo in Step02
 
