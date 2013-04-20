@@ -1,0 +1,8 @@
+To Do in Step 01
+
+What do we have?
+We have an empty maven project with the correct javafx dependency added.
+Note that you have to previously define the JAVA_HOME environment variable the java you are using.
+
+What do we wan to do?
+Create a simple stage who has a button and shows a label in the stage with the phrase: "Hello, World!"
